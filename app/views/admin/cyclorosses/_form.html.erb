@@ -1,0 +1,24 @@
+<%= simple_form_for cycloross, url:  (cycloross.id == nil || cycloross.id ==0 ? admin_cyclorosses_path : admin_cycloross_path(cycloross)) ,method: (cycloross.id == nil || cycloross.id ==0 ? :post: :put), :html => {:class => 'form-horizontal' } do |form| %>
+  <% if cycloross.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cycloross.errors.count, "error") %> prohibited this cycloross from being saved:</h2>
+
+      <ul>
+      <% cycloross.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.input :name %>
+  <%= form.input :description %>
+  <%= form.input :show, as: :boolean%>
+  
+  <%= form.input :photo, as: :file %>
+  <%=cycloross.photo.present? ? image_tag(cycloross.photo.url): ""   %>
+
+  <div class="actions">
+  <%= form.button :submit , "Grabar" %>
+  </div>
+<% end %>

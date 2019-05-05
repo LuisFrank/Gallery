@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Admin Editorials</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Show</th>
+      <th>Order</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_editorials.each do |admin_editorial| %>
+      <tr>
+        <td><%= admin_editorial.name %></td>
+        <td><%= admin_editorial.description %></td>
+        <td><%= admin_editorial.show %></td>
+        <td><%= admin_editorial.order %></td>
+        <td><%= link_to 'Show', admin_editorial %></td>
+        <td><%= link_to 'Edit', edit_admin_editorial_path(admin_editorial) %></td>
+        <td><%= link_to 'Destroy', admin_editorial, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admin Editorial', new_admin_editorial_path %>

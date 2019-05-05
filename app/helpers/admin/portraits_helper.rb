@@ -1,0 +1,2 @@
+module Admin::PortraitsHelper
+end

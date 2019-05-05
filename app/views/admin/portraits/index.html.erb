@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Admin Portraits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Show</th>
+      <th>Order</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_portraits.each do |admin_portrait| %>
+      <tr>
+        <td><%= admin_portrait.name %></td>
+        <td><%= admin_portrait.description %></td>
+        <td><%= admin_portrait.show %></td>
+        <td><%= admin_portrait.order %></td>
+        <td><%= link_to 'Show', admin_portrait %></td>
+        <td><%= link_to 'Edit', edit_admin_portrait_path(admin_portrait) %></td>
+        <td><%= link_to 'Destroy', admin_portrait, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admin Portrait', new_admin_portrait_path %>

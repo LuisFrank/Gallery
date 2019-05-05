@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @admin_editorial.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @admin_editorial.description %>
+</p>
+
+<p>
+  <strong>Show:</strong>
+  <%= @admin_editorial.show %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @admin_editorial.order %>
+</p>
+
+<%= link_to 'Edit', edit_admin_editorial_path(@admin_editorial) %> |
+<%= link_to 'Back', admin_editorials_path %>

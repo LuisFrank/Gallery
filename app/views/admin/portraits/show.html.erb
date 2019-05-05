@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @admin_portrait.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @admin_portrait.description %>
+</p>
+
+<p>
+  <strong>Show:</strong>
+  <%= @admin_portrait.show %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @admin_portrait.order %>
+</p>
+
+<%= link_to 'Edit', edit_admin_portrait_path(@admin_portrait) %> |
+<%= link_to 'Back', admin_portraits_path %>
