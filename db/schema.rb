@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_05_190813) do
+ActiveRecord::Schema.define(version: 2020_01_08_040816) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,10 +42,54 @@ ActiveRecord::Schema.define(version: 2020_01_05_190813) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "beauties", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.integer "order"
+    t.boolean "show"
+    t.boolean "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "photo"
+  end
+
+  create_table "commercials", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.integer "order"
+    t.boolean "show"
+    t.boolean "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "photo"
+  end
+
   create_table "cyclorosses", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.boolean "show"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "photo"
+  end
+
+  create_table "fashions", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.integer "order"
+    t.boolean "show"
+    t.boolean "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "photo"
+  end
+
+  create_table "jewelries", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.integer "order"
+    t.boolean "show"
+    t.boolean "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "photo"

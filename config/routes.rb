@@ -36,7 +36,10 @@ namespace :admin do
   resources :sports
 
   resources :portfolios
-
+  resources :beauties
+  resources :commercials
+  resources :fashions
+  resources :jewelries
 
 end
 

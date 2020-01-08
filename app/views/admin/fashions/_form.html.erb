@@ -1,0 +1,17 @@
+
+<%= simple_form_for(@admin_fashion) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :order %>
+  <%= f.input :show %>
+
+  <%= f.input :photo, as: :file %>
+  <%=admin_fashion.photo.present? ? image_tag(admin_fashion.photo.url): ""   %>
+
+  <div class="actions">
+  <%= f.button :submit , "Grabar" %>
+  </div>
+<% end %>

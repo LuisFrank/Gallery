@@ -1,0 +1,2 @@
+module Admin::JewelriesHelper
+end
