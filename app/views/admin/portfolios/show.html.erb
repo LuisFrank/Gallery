@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @admin_portfolio.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @admin_portfolio.description %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @admin_portfolio.order %>
+</p>
+
+<p>
+  <strong>Show:</strong>
+  <%= @admin_portfolio.show %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @admin_portfolio.active %>
+</p>
+
+<%= link_to 'Edit', edit_admin_portfolio_path(@admin_portfolio) %> |
+<%= link_to 'Back', admin_portfolios_path %>

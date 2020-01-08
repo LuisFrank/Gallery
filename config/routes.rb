@@ -1,24 +1,41 @@
 Rails.application.routes.draw do
 
+  # namespace :admin do
+  #   resources :portfolios
+  # end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 
-root to: 'main#cyclocross'
+root to: 'main#portfolio'
 
+#Menu pirncipal
+get 'main/beauty', :to => 'main#beauty'
+get 'main/fashion', :to => 'main#fashion'
+get 'main/commercial', :to => 'main#commercial'
+get 'main/jewelry', :to => 'main#jewelry'
 
+#Servicio y contacto
 get 'main/blog', :to => 'main#blog' 
 get 'main/contact', :to => 'main#contact' 
-get 'main/editorial', :to => 'main#editorial'
-get 'main/portrait', :to => 'main#portrait'
-get 'main/sport', :to => 'main#sport'
+
+
+
+
+# get 'main/blog', :to => 'main#blog' 
+# get 'main/contact', :to => 'main#contact' 
+# get 'main/editorial', :to => 'main#editorial'
+# get 'main/portrait', :to => 'main#portrait'
+# get 'main/sport', :to => 'main#sport'
 
 namespace :admin do 
 
-  root to: 'main#cyclocross'
+  # root to: 'main#cyclocross'
   resources :cyclorosses
   resources :portraits
   resources :editorials
   resources :sports
+
+  resources :portfolios
 
 
 end
