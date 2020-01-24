@@ -8,7 +8,8 @@
   <%= f.input :order %>
   <%= f.input :show %>
 
-
+  
+  <%#=admin_portfolio.photo.present? ? link_to @admin_portfolio.photo_identifier, @admin_portfolio.photo.url) : "" %>
   <%= f.input :photo, as: :file %>
   <%=admin_portfolio.photo.present? ? image_tag(admin_portfolio.photo.url): ""   %>
 

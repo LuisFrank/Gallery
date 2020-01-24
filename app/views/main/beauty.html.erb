@@ -1,1 +1,13 @@
-beauty
+<div class="row" >
+  <div class="container mt-5">
+    <div class="mt-5">
+      <div style="overflow-x: scroll;white-space:nowrap; width: 100%;">
+          <% @admin_beauties.each do |admin_beauty| %>
+            <div style="display: inline-block;">
+                <img src="<%=admin_beauty.photo.medium.url%>">
+            </div>
+          <% end %>           
+      </div>
+      </div>
+  </div>
+</div>

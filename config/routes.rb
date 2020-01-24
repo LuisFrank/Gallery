@@ -14,9 +14,12 @@ get 'main/fashion', :to => 'main#fashion'
 get 'main/commercial', :to => 'main#commercial'
 get 'main/jewelry', :to => 'main#jewelry'
 
-#Servicio y contacto
-get 'main/blog', :to => 'main#blog' 
-get 'main/contact', :to => 'main#contact' 
+#Contacto, servicios y bio
+get 'main/services', :to => 'main#services'
+get 'main/contact', :to => 'main#contact'
+post 'main/contact', :to => 'main#create_contact'  
+get 'main/bio', :to => 'main#bio' 
+
 
 
 
@@ -29,7 +32,8 @@ get 'main/contact', :to => 'main#contact'
 
 namespace :admin do 
 
-  # root to: 'main#cyclocross'
+  root to: 'base#home'
+   
   resources :cyclorosses
   resources :portraits
   resources :editorials

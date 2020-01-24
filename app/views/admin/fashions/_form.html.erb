@@ -8,6 +8,7 @@
   <%= f.input :order %>
   <%= f.input :show %>
 
+  <%= link_to "Download", @admin_fashion.photo.url, download: @admin_fashion.photo.filename %>
   <%= f.input :photo, as: :file %>
   <%=admin_fashion.photo.present? ? image_tag(admin_fashion.photo.url): ""   %>
 

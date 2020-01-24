@@ -1,0 +1,13 @@
+<div class="row" >
+  <div class="container mt-5">
+    <div class="mt-5">
+      <div style="overflow-x: scroll;white-space:nowrap; width: 100%;">
+          <% @admin_jewelries.each do |admin_jewelry| %>
+            <div style="display: inline-block;">
+                <img src="<%=admin_jewelry.photo.medium.url%>">
+            </div>
+          <% end %>           
+      </div>
+      </div>
+  </div>
+</div>

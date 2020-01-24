@@ -1,1 +1,27 @@
-contact
+
+<div class="container  mt-5">
+<div class="row">
+  <div class="col-md-12">
+    <div class="well well-sm">
+      <fieldset>
+      <legend class="text-center">Contact me</legend>
+            
+      <%= simple_form_for @contact, url: main_contact_path,wrapper: :vertical_form do |f| %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+        <%= f.input :name %>
+        <%= f.input :email %>
+        <%= f.input :message , as: :text, :input_html => { :placeholder => "Please enter your message here..." , :rows => "5" }%>
+       
+        <div class="actions">
+        <%= f.button :submit , "Grabar", class:"btn btn-primary btn-lg" %>
+        </div>
+      
+      <% end %>
+      </fieldset>
+
+    </div>
+  </div>
+</div>
+</div>

@@ -1,24 +1,38 @@
-<nav class="col-md-2 d-none d-md-block  sidebar">
-    <div class="sidebar-header">
-    <h3>Bootstrap Sidebar</h3>
-    </div>
+<div class="col-md-2">
+    <nav class="d-none d-md-block  sidebar mt-5 ml-5">
+        <div class="sidebar-header">
+        <h3 class="h2 font-weight-bold">XURDE PASTOR</h3>
+        </div>
 
-    <ul class="list-unstyled components">
-    <p>Dummy Heading</p>
-    <li class="active">   
-    <%=link_to "Portfolio", controller: "main", action: "portfolio" %>
-    </li>   
-    <li>
-    <%=link_to "Beauty", controller: "main", action: "beauty" %>
-    </li>
-    <li>
-    <%=link_to "Fashion", controller: "main", action: "fashion" %>
-    </li>
-    <li>
-    <%=link_to "Commercial", controller: "main", action: "commercial" %>
-    </li>
-    <li>
-    <%=link_to "Jewelry", controller: "main", action: "jewelry" %>   
-    </li>
-    </ul>
-</nav>
+        <ul class="list-unstyled components">
+        <p>Photography and  Retouching</p>
+        <li class="active">   
+        <%=link_to "Portfolio", controller: "main", action: "portfolio" %>
+        </li>   
+        <li>
+        <%=link_to "Beauty", controller: "main", action: "beauty" %>
+        </li>
+        <li>
+        <%=link_to "Fashion", controller: "main", action: "fashion" %>
+        </li>
+        <li>
+        <%=link_to "Commercial", controller: "main", action: "commercial" %>
+        </li>
+        <li>
+        <%=link_to "Jewelry", controller: "main", action: "jewelry" %>   
+        </li>
+
+        <li>
+        <%=link_to "Services", controller: "main", action: "services" %>   
+        </li>
+        
+        <li>
+        <%=link_to "Contact", controller: "main", action: "contact" %>   
+        </li>
+        
+        <li>
+        <%=link_to "Bio", controller: "main", action: "bio" %>   
+        </li>
+        </ul>
+    </nav>
+</div>

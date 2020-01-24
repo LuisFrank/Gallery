@@ -5,6 +5,11 @@
 <table>
   <thead>
     <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Order</th>
+      <th>Show</th>
+      <th>Active</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,9 +17,14 @@
   <tbody>
     <% @admin_beauties.each do |admin_beauty| %>
       <tr>
+        <td><%= admin_beauty.name %></td>
+        <td><%= admin_beauty.description %></td>
+        <td><%= admin_beauty.order %></td>
+        <td><%= admin_beauty.show ? "SI" : "NO" %></td>
+        <td><%= admin_beauty.active %></td>
         <td><%= link_to 'Show', admin_beauty %></td>
         <td><%= link_to 'Edit', edit_admin_beauty_path(admin_beauty) %></td>
-        <td><%= link_to 'Destroy', admin_beauty, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', admin_beauty, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Admin Beauty', new_admin_beauty_path %>
+<%= link_to 'New Beauty', new_admin_beauty_path %>
