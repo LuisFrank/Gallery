@@ -7,6 +7,7 @@ ruby '2.5.4'
 gem 'bootstrap', '~> 4.3.1'
 gem 'simple_form'
 gem 'carrierwave', '~> 1.0'
+gem 'summernote-rails', '~> 0.8.12.0'
 
 gem 'jquery-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -32,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+
+gem 'devise'
 
 # Use ActiveStorage variant
  gem 'mini_magick', '~> 4.8'

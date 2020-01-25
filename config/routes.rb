@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+
+  devise_for :users , :controllers => {:sessions => "users/sessions" ,
+                                       :passwords => "users/passwords", 
+                                       :registrations => "users/registrations",
+                                       :confirmations => "users/confirmations",
+                                       :unlocks => "users/unlocks"}
   # namespace :admin do
   #   resources :portfolios
   # end
@@ -32,18 +38,22 @@ get 'main/bio', :to => 'main#bio'
 
 namespace :admin do 
 
+
   root to: 'base#home'
    
-  resources :cyclorosses
-  resources :portraits
-  resources :editorials
-  resources :sports
+  # resources :cyclorosses
+  # resources :portraits
+  # resources :editorials
+  # resources :sports
 
   resources :portfolios
   resources :beauties
   resources :commercials
   resources :fashions
   resources :jewelries
+
+  resources :services
+  resources :biographies
 
 end
 

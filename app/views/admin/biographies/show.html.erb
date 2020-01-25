@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @admin_biography.message %>
+</p>
+
+<p>
+  <strong>Visible:</strong>
+  <%= @admin_biography.visible %>
+</p>
+
+<%= link_to 'Edit', edit_admin_biography_path(@admin_biography) %> |
+<%= link_to 'Back', admin_biographies_path %>

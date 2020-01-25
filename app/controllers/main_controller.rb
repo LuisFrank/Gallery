@@ -3,9 +3,6 @@ class MainController < ApplicationController
     
     def portfolio
         @admin_portfolios = Admin::Portfolio.publicated
-        p 'hola'
-        puts @admin_portfolios
-        p @admin_portfolios.inspect
     end
     
     def beauty
@@ -53,6 +50,7 @@ class MainController < ApplicationController
     end
 
     def bio
+        @admin_biography = Admin::Biography.publicated.first
     end
 
   
