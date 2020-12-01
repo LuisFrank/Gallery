@@ -15,16 +15,16 @@ Rails.application.routes.draw do
 root to: 'main#portfolio'
 
 #Menu pirncipal
-get 'main/beauty', :to => 'main#beauty'
-get 'main/fashion', :to => 'main#fashion'
-get 'main/commercial', :to => 'main#commercial'
-get 'main/jewelry', :to => 'main#jewelry'
+get 'beauty', :to => 'main#beauty'
+get 'fashion', :to => 'main#fashion'
+get 'commercial', :to => 'main#commercial'
+get 'jewelry', :to => 'main#jewelry'
 
 #Contacto, servicios y bio
-get 'main/services', :to => 'main#services'
-get 'main/contact', :to => 'main#contact'
+get 'services', :to => 'main#services'
+get 'contact', :to => 'main#contact'
 post 'main/contact', :to => 'main#create_contact'  
-get 'main/bio', :to => 'main#bio' 
+get 'bio', :to => 'main#bio' 
 
 
 
