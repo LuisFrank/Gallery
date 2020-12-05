@@ -5,6 +5,7 @@ ruby '2.5.4'
 
 
 gem 'bootstrap', '~> 4.3.1'
+gem 'font_awesome5_rails'
 gem 'simple_form'
 gem 'carrierwave', '~> 1.0'
 gem 'summernote-rails', '~> 0.8.12.0'

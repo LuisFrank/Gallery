@@ -3,12 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-/* The heart of the matter */
-.testimonial-group > .row {
-    overflow-x: auto;
-    white-space: nowrap;
+.custom-width {
+    overflow: scroll;
+    overflow-y: hidden;
+    white-space:nowrap;
+    position: absolute; 
+    width:100%;
 }
-.testimonial-group > .row > .col-xs-4 {
-    display: inline-block;
-    float: none;
-}
+
+a:hover {
+    color: #9da9b4;
+    text-decoration: none;
+  }

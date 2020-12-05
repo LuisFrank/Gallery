@@ -1,38 +1,37 @@
 <div class="col-md-2">
     <nav class="d-none d-md-block  sidebar mt-5 ml-5">
         <div class="sidebar-header">
-        <h3 class="h2 font-weight-bold">XURDE PASTOR</h3>
+                <h3 class="h2 font-weight-bold">XURDE PASTOR</h3>
         </div>
 
         <ul class="list-unstyled components">
-        <p>Photography and  Retouching</p>
-        <li class="active">   
-        <%=link_to "Portfolio", controller: "main", action: "portfolio" %>
-        </li>   
-        <li>
-        <%=link_to "Beauty", controller: "main", action: "beauty" %>
-        </li>
-        <li>
-        <%=link_to "Fashion", controller: "main", action: "fashion" %>
-        </li>
-        <li>
-        <%=link_to "Commercial", controller: "main", action: "commercial" %>
-        </li>
-        <li>
-        <%=link_to "Jewelry", controller: "main", action: "jewelry" %>   
-        </li>
-
-        <li>
-        <%=link_to "Services", controller: "main", action: "services" %>   
-        </li>
-        
-        <li>
-        <%=link_to "Contact", controller: "main", action: "contact" %>   
-        </li>
-        
-        <li>
-        <%=link_to "Biography", controller: "main", action: "bio" %>   
-        </li>
+                <p><strong>Photography /<br>Retouching</strong></p>
+                <li class="active">   
+                <strong>Portfolio</strong>
+                <%#=link_to "Portfolio", controller: "main", action: "portfolio" %>
+                </li>   
+                <li>
+                <%=link_to "Beauty", controller: "main", action: "beauty" %>
+                </li>
+                <li>
+                <%=link_to "Fashion", controller: "main", action: "fashion" %>
+                </li>
+                <li>
+                <%=link_to "Commercial", controller: "main", action: "commercial" %>
+                </li>
+                <li>
+                <%=link_to "Jewelry", controller: "main", action: "jewelry" %>   
+                </li>
+                <li>
+                <%= link_to "/services" do %>
+                    <strong>Services</strong>
+                <% end %>  
+                </li> 
+                <li>       
+                <%= link_to "/bio" do %>
+                    <strong>About/Contact</strong>
+                <% end %>   
+                <li>       
         </ul>
     </nav>
 </div>
